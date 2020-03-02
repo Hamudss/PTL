@@ -138,3 +138,24 @@ def separatorItems(array, separator_default=',', separator_final=' e '):
             strReturn += separator_final + array[item]
 
     return strReturn
+
+
+# Send email PTL
+def send_email_PTL(email_to, email_cc, email_cco, email_subject, email_body, file=None):
+    contentEmail = {
+        'email_to': email_to,
+        'email_cc': email_cc,
+        'email_cco': email_cco,
+        'email_subject': email_subject,
+        'email_body': email_body
+    }
+    url = 'https://portal.preambulo.com.br/agnesdev/api/v1/platform/email'
+    try:
+        if file:
+            files = {'file': open(file, 'rb')}
+            r = requests.post(url, files=files, data=contentEmail)
+        else:
+            r = requests.post(url, data=contentEmail)
+    except requests.exceptions.RequestException as e:
+        return e
+    return ''
