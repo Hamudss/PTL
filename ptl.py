@@ -141,7 +141,8 @@ def separatorItems(array, separator_default=',', separator_final=' e '):
 
 
 # Send email PTL
-def send_email_PTL(email_to, email_cc, email_cco, email_subject, email_body, file=None):
+def send_email_PTL(email_to, email_cc, email_cco, email_subject, email_body, cliente='', file=None):
+    headers = {'Authorization': 'Bearer ' + get_cliente_key(cliente)}
     contentEmail = {
         'email_to': email_to,
         'email_cc': email_cc,
@@ -153,9 +154,10 @@ def send_email_PTL(email_to, email_cc, email_cco, email_subject, email_body, fil
     try:
         if file:
             files = {'file': open(file, 'rb')}
-            r = requests.post(url, files=files, data=contentEmail)
+            r = requests.post(url, headers=headers,
+                              files=files, data=contentEmail)
         else:
-            r = requests.post(url, data=contentEmail)
+            r = requests.post(url, headers=headers, data=contentEmail)
     except requests.exceptions.RequestException as e:
         return e
     return ''
