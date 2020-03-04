@@ -150,7 +150,7 @@ def send_email_PTL(email_to, email_cc, email_cco, email_subject, email_body, cli
         'email_subject': email_subject,
         'email_body': email_body
     }
-    url = 'https://portal.preambulo.com.br/agnesdev/api/v1/platform/email'
+    url = 'https://api-agnes.preambulo.com.br/api/v1/platform/email'
     try:
         if file:
             files = {'file': open(file, 'rb')}
