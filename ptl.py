@@ -15,7 +15,7 @@ def get_cliente_key(cliente):
 
 # Requests para a api.agnes
 def get_data_api(endpoint, params, cliente):
-    url = 'https://agnes-api.preambulo.com.br/api/v1/platform/' + endpoint + '?' + params
+    url = 'https://api-agnes.preambulo.com.br/api/v1/platform/' + endpoint + '?' + params
     headers = {'content-type': 'application/json',
                'Authorization': 'Bearer ' + get_cliente_key(cliente)}
     try:
@@ -28,7 +28,7 @@ def get_data_api(endpoint, params, cliente):
 
 
 def set_interview_completed(cliente, params):
-    url = 'https://agnes-api.preambulo.com.br/api/v1/platform/execution?' + params
+    url = 'https://api-agnes.preambulo.com.br/api/v1/platform/execution?' + params
     headers = {'content-type': 'application/json',
                'Authorization': 'Bearer ' + get_cliente_key(cliente)}
     try:
@@ -41,7 +41,7 @@ def set_interview_completed(cliente, params):
 
 
 def validate_token(token):
-    url = 'https://agnes-api.preambulo.com.br/api/v1/platform/token_validate'
+    url = 'https://api-agnes.preambulo.com.br/api/v1/platform/token_validate'
     headers = {'content-type': 'application/json',
                'Authorization': 'Bearer ' + token}
     user = {'token': token}
@@ -67,7 +67,7 @@ def get_barcode(typeBarcode='ean', code='1'):
 
 
 def get_extenso(tipo='numerico', valor='0', cliente=''):
-    url = 'https://agnes-api.preambulo.com.br/api/v1/extenso?tipo=' + \
+    url = 'https://api-agnes.preambulo.com.br/api/v1/extenso?tipo=' + \
         tipo + '&valor=' + valor
     headers = {'content-type': 'application/json',
                'Authorization': 'Bearer ' + get_cliente_key(cliente)}
@@ -150,7 +150,7 @@ def send_email_PTL(email_to, email_cc, email_cco, email_subject, email_body, cli
         'email_subject': email_subject,
         'email_body': email_body
     }
-    url = 'https://agnes-api.preambulo.com.br/api/v1/platform/email'
+    url = 'https://api-agnes.preambulo.com.br/api/v1/platform/email'
     try:
         if file:
             files = {'file': open(file, 'rb')}
