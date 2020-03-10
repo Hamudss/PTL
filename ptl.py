@@ -163,3 +163,12 @@ def send_email_PTL(email_to, email_cc, email_cco, email_subject, email_body, cli
     except requests.exceptions.RequestException as e:
         return e
     return ''
+
+
+# Send request
+def send_request(url, verb='GET', headers={}, data={}):
+    try:
+        r = requests.request(verb, headers=headers, url=url, data=data)
+        return r
+    except requests.exceptions.RequestException as e:
+        return e
