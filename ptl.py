@@ -166,9 +166,9 @@ def send_email_PTL(email_to, email_cc, email_cco, email_subject, email_body, cli
 
 
 # Send request
-def send_request(url, verb='GET', headers={}, data={}):
+def send_request(url, method='GET', headers={}, data={}):
     try:
-        r = requests.request(verb, headers=headers, url=url, data=data)
+        r = requests.request(method, headers=headers, url=url, data=data)
         return r
     except requests.exceptions.RequestException as e:
         return e
