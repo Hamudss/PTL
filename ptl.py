@@ -69,8 +69,7 @@ def get_barcode(typeBarcode='ean', code='1'):
 
 
 def get_extenso(tipo='numerico', valor='0', cliente=''):
-    url = 'https://agnes-api.preambulo.com.br/api/v1/extenso?tipo=' + \
-        tipo + '&valor=' + valor
+    url = 'https://agnes-api.preambulo.com.br/api/v1/extenso?tipo=' + tipo + '&valor=' + valor
     headers = {'content-type': 'application/json',
                'Authorization': 'Bearer ' + get_cliente_key(cliente)}
     try:
