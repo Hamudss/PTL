@@ -166,112 +166,112 @@ def send_request(url, method='GET', headers={}, data={}):
 def get_UF_extenso(chave):
   dicionario = {
     'AC':{
-      'descricao':"ACRE",
-      'preposicao':'DO ESTADO DO'
+      'descricao':"Acre",
+      'preposicao':'do'
     },
     'AL':{
-      'descricao':"ALAGOAS",
-      'preposicao':'DO ESTADO DE'
+      'descricao':"Alagoas",
+      'preposicao':'de'
     },
     'AP':{
-      'descricao':"AMAPÁ",
-      'preposicao':'DO ESTADO DO'
+      'descricao':"Amapá",
+      'preposicao':'do
     },
     'AM':{
-      'descricao':"AMAZONAS",
-      'preposicao':'DO ESTADO DO'
+      'descricao':"Amazonas",
+      'preposicao':'do'
     },
     'BA':{
-      'descricao':"BAHIA",
-      'preposicao':'DO ESTADO DA'
+      'descricao':"Bahia",
+      'preposicao':'da'
     },
     'CE':{
-      'descricao':"CEARÁ",
-      'preposicao':'DO ESTADO DO'
+      'descricao':"Ceará",
+      'preposicao':'do'
     },
     'DF':{
-      'descricao':"DISTRITO FEDERAL",
-      'preposicao':'DO'
+      'descricao':"Distrito Federal",
+      'preposicao':'do'
     },
     'ES':{
-      'descricao':"ESPÍRITO SANTO",
-      'preposicao':'DO ESTADO DO'
+      'descricao':"Espírito Santo",
+      'preposicao':'do'
     },
     'GO':{
-      'descricao':"GOIÁS",
-      'preposicao':'DO ESTADO DE'
+      'descricao':"Goiás",
+      'preposicao':'de'
     },
     'MA':{
-      'descricao':"MARANHÃO",
-      'preposicao':'DO ESTADO DO'
+      'descricao':"Maranhão",
+      'preposicao':'do'
     },
     'MT':{
-      'descricao':"MATO GROSSO",
-      'preposicao':'DO ESTADO DO'
+      'descricao':"Mato Grosso",
+      'preposicao':'do'
     },         
     'MS':{
-      'descricao':"MATO GROSSO DO SUL",
-      'preposicao':'DO ESTADO DO'
+      'descricao':"Mato Grosso do Sul",
+      'preposicao':'do'
     },
     'MG':{
-      'descricao':"MINAS GERAIS",
-      'preposicao':'DO ESTADO DE'
+      'descricao':"Minas Gerais",
+      'preposicao':'de'
     },
     'PA':{
-      'descricao':"PARÁ",
-      'preposicao':'DO ESTADO DO'
+      'descricao':"Pará",
+      'preposicao':'do'
     },
     'PB':{
-      'descricao':"PARAÍBA",
-      'preposicao':'DO ESTADO DA'
+      'descricao':"Paraíba",
+      'preposicao':'da'
     },
     'PR':{
-      'descricao':"PARANÁ",
-      'preposicao':'DO ESTADO DO'
+      'descricao':"Paraná",
+      'preposicao':'do'
     },
     'PE':{
-      'descricao':"PERNAMBUCO",
-      'preposicao':'DO ESTADO DE'
+      'descricao':"Pernambuco",
+      'preposicao':'de'
     },
     'PI':{
-      'descricao':"PIAUÍ",
-      'preposicao':'DO ESTADO DO'
+      'descricao':"Piauí",
+      'preposicao':'do'
     },
     'RJ':{
-      'descricao':"RIO DE JANEIRO",
-      'preposicao':'DO ESTADO DO'
+      'descricao':"Rio de Janeiro",
+      'preposicao':'do'
     },
     'RN':{
-      'descricao':"RIO GRANDE DE NORTE",
-      'preposicao':'DO ESTADO DO'
+      'descricao':"Rio Grande do Norte",
+      'preposicao':'do'
     },
     'RS':{
-      'descricao':"RIO GRANDE DO SUL",
-      'preposicao':'DO ESTADO DO'
+      'descricao':"Rio Grande do Sul",
+      'preposicao':'do'
     },
     'RO':{
-      'descricao':"RONDÔNIA",
-      'preposicao':'DO ESTADO DE'
+      'descricao':"Rondônia",
+      'preposicao':'de'
     },
     'RR':{
-      'descricao':"RORAIMA",
-      'preposicao':'DO ESTADO DE'
+      'descricao':"Roraima",
+      'preposicao':'de'
     },
     'SC':{
-      'descricao':"SANTA CATARINA",
-      'preposicao':'DO ESTADO DE'
+      'descricao':"Santa Catarina",
+      'preposicao':'de'
     },
     'SP':{
-      'descricao':"SÃO PAULO",
-      'preposicao':'DO ESTADO DE'
+      'descricao':"São Paulo",
+      'preposicao':'de'
     },
     'SE':{
-      'descricao':"SERGIPE",
-      'preposicao':'DO ESTADO DE'
+      'descricao':"Sergipe",
+      'preposicao':'de'
     },
     'TO':{
-      'descricao':"TOCANTINS",
-      'preposicao':'DO ESTADO DE'
+      'descricao':"Tocantins",
+      'preposicao':'de'
     }
   }
   return dicionario.get(chave)
