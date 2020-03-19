@@ -175,7 +175,7 @@ def get_UF_extenso(chave):
     },
     'AP':{
       'descricao':"Amapá",
-      'preposicao':'do
+      'preposicao':'do'
     },
     'AM':{
       'descricao':"Amazonas",
