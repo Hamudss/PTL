@@ -274,4 +274,8 @@ def get_UF_extenso(chave):
       'preposicao':'de'
     }
   }
-  return dicionario.get(chave)
+  try:
+    return dicionario.get(chave)
+  except:
+    return chave
+  
