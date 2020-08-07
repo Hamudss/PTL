@@ -2,6 +2,7 @@ import re
 import sys
 import requests
 import json
+import barcode
 from docassemble.base.util import get_config, DAFile
 from datetime import datetime, timedelta
 
@@ -56,7 +57,7 @@ def get_barcode(typeBarcode='ean', code='1'):
     file = DAFile()
     file.initialize(extension='png')
     EAN = barcode.get_barcode_class(typeBarcode)
-    ean = EAN(code, writer=ImageWriter())
+    ean = EAN(code, writer=barcode.writer.ImageWriter())
     name = ean.save(file.path()[:-4])
     return file
 
