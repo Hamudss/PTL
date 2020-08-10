@@ -56,6 +56,8 @@ def validate_token(token):
 def get_barcode(typeBarcode='ean', code='1'):
     file = DAFile()
     file.initialize(extension='png')
+    if typeBarcode == 'ean':
+      code = code.zfill(12)
     EAN = barcode.get_barcode_class(typeBarcode)
     ean = EAN(code, writer=barcode.writer.ImageWriter())
     name = ean.save(file.path()[:-4])
